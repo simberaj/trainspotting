@@ -1,0 +1,612 @@
+<html tabindex="0" lang="cs">
+<head><link rel="stylesheet" href="/Tabule/DXR.axd?r=23_79,23_88-QB13r" /><title>
+	Praha-Libeň (příjezdy) - TABULE
+</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /><link rel="stylesheet" href="../Content/ogbootstrapszdc.min.css" /><link rel="stylesheet" href="../Content/font-awesome.min.css" /><link rel="stylesheet" href="../Content/OG/ogThemeDarkBlue.css" /><link rel="stylesheet" href="../Content/appcustom.css" /><link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <link href='../Content/appcustom.css?2' rel="stylesheet" />
+</head>
+<body class="OGSkin">
+    <script type="text/javascript" src="../Scripts/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../Scripts/umd/popper.min.js"></script>
+    <script type="text/javascript" src="../Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../Scripts/OG/OGScript.js"></script>
+    <script type="text/javascript" src="../Scripts/appcustom.js"></script>
+    
+    <script type="text/javascript" src="../Scripts/appcustom.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            DateTime();
+            setInterval(function () { GetTableData(); }, 60000);
+            setInterval(function () { Blink(".blinking1"); }, 1000);
+            setInterval(function () { Blink(".blinking2"); }, 2000);
+            setInterval(function () { Blink(".blinking5"); }, 5000);
+            setInterval(function () { DateTime(); }, 1000);
+            $('.Header a')
+                .focus(function () {
+                    $(this).parent().addClass('focused');
+                })
+                .blur(function () {
+                    $(this).parent().removeClass('focused');
+                });
+        });
+    </script>   
+
+    <form method="post" action="./StationTable.aspx?Key=3471&amp;Arr=1" id="mainForm" autocomplete="off">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['mainForm'];
+if (!theForm) {
+    theForm = document.mainForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/Tabule/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZE-v-ak-PMvfI6pA0H_ZCNLoy3vCRh41bazKvV4sPLVv0kV3YgDsoW7U0aosQrDx9g2&amp;t=638369102615952268" type="text/javascript"></script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="B38EDA93" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/div3QBHWUfACSDc1kgtA/Aj9VGrzXfhsBumT9K8I3+3kttsQiibjJaj4+X/znfUsOvMvJbj98oTJt6QJ85gJlQwEQHuI1AtNCcCbwf94dasZGWvruyRcxnu63eli9c3mBannvBlCXET/wo2oq1dKtobwkBnZG04kXD+9UcR4lujUCWc2yJknrjGHAsKBFJR6xi879ytPjQtonlRYOAB6lksuhTKhVAGFL0uOG0d8ww=" />
+</div>
+        <script type="text/javascript">   
+            OGAppUri = '/tabule';
+            OGAppName = 'Vitamin';
+            $(document).ready(function () {
+                ActualizeQuickMessage();
+                setInterval(function () { ActualizeQuickMessage(); }, 60000);
+                $(window).resize(function () { OGFitWindow(); });
+                OGFitWindow();
+            });
+        </script>
+        <div class="Header" id="OGHeader">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                        <a href="../Default.aspx" class="HeaderLink">
+                            <img id="OGAppHeaderImage" class="HeaderImage" src="../Images/LogoTabule.svg" alt="TABULE - úvodní stránka" />
+                        </a>
+                    </div>
+                    <div class="hidden-xs col-sm-6 col-md-6 col-lg-6 text-center">
+                        <span id="OGAppHeaderName" class="HeaderName"></span>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                        <a href="https://www.spravazeleznic.cz" target="_blank">
+                            <img id="OGImageSZDC" class="HeaderSZDC hidden-sm hidden-xs" src="../Images/OG/SZDCLogoHeader.svg" alt="Správa železnic - úvodní stránka" align="right" />
+                            <img id="OGImageSZDCMin" class="HeaderSZDCMin hidden-lg hidden-md" src="../Images/OG/SZDCLogoHeaderMin.svg" alt="Správa železnic - úvodní stránka" align="right" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="SubRow" id="OGSubrow">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="info">
+                            <span id="OGSubRowVersion" title="13.11.2023">verze: 2.0.1</span>
+                            <div class="OGRightPipe">&nbsp;</div>
+                            <span id="OGSubRowSupport">podpora: help-tabule@oltis.cz</span>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-6 col-lg-7">
+                        <div class="Marquee hidden">
+                            <div id="OGQuickMessages"></div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                        <div class="RightNoXS Padding5px">
+                            <a id="OGHLLanguage" class="HeaderLink" onmouseover="OGHLLanguage.style.color= &#39;#002b59&#39;;OGHLLanguage.style.fontWeight = &#39;bold&#39;" onmouseout="OGHLLanguage.style.color = &#39;#00a1e0&#39;; OGHLLanguage.style.fontWeight = &#39;normal&#39;" href="javascript:__doPostBack(&#39;ctl00$OGHLLanguage&#39;,&#39;&#39;)">English</a>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="MainContent" id="mainContent">
+            <div class="ScroolContent">
+                <div class="MainAnonPageContent" id="OGMainAnonPageContent">
+                    <div>
+                        <script id="dxss_1594992262">
+<!--
+var ASPx,dx,DevExpress;!function n(t,o,e,r,i,a,c){var u=[],l=[],d=0,f=[],s=[],h=!1;function C(n,r,i){n[i]=function(){r(t,o,e)}}function v(){return r==d}function m(){return!0}function E(n){return function(){throw new Error(n)}}function x(n){n()}var S=-1;function b(n,t,o,e){var r=++S;return function(){i(function(){r==S&&o()&&(S--,function(n){for(var t=n.length,o=0,e=null;(e=n[o])&&o<t;o++)e&&e();n.length=0}(t),e())})}}var p=b(0,f,function(){return h&&v()},function(){t.attachToReady=x}),T=b(0,s,m,function(){t.attachToLoad=x,p()}),w=b(0,l,m,function(){t.SS=function(n){n(t,o,e)},T()}),A=b(0,u,v,function(){t.IS=E("Too late"),w()}),y=0;t.SS=function(n){var t=y++;i(function(){C(l,n,t)})};var P=0;t.IS=function(n,t){i(function(){for(C(u,n,t),d++;P<d&&u[P];)u[P]=u[P]()&&null,P++;A()})},t.attachToReady=f.push.bind(f),t.attachToLoad=s.push.bind(s),t.initResourceLoader=n,c.addEventListener("DOMContentLoaded",function(){r=c.querySelectorAll("script[id^=dxis_][defer]").length,A()}),a.addEventListener("load",function(){h=!0,p()});var L=["BeginCallback","BrowserWindowResized","CallbackError","ControlsInitialized","EndCallback","ValidationCompleted"],B=["ForEachControl","Get","GetByName","GetControlsByPredicate","GetControlsByType"],G=[];var g=L.reduce(function(n,t){return((n[t]={}).AddHandler=function(n){G.push({e:t,h:n})})&&n},{});g=B.reduce(function(n,t){return(n[t]=E("The environment has not been initialized. To access the "+t+" member, call the member from the ControlsInitialized event's handler."))&&n},g),t.loadControlCollectionPreloadHandlers=function(n){G.forEach(function(t){n[t.e].AddHandler(t.h)}),L.forEach(function(t){g[t]=n[t]}),B.forEach(function(t){g[t]=n[t].bind(n)}),t.loadControlCollectionPreloadHandlers=G=g=null},a.ASPxClientControl={GetControlCollection:function(){return g}}}(ASPx||(ASPx={}),dx||(dx={}),DevExpress||(DevExpress={}),-1,window.requestAnimationFrame||setTimeout,window,document);
+
+//-->
+</script><script id="dxis_1050921301" src="/Tabule/DXR.axd?r=1_9,1_62-mD13r"></script><script id="dxis_803802173" src="/Tabule/DXR.axd?r=1_10,1_253,1_11,1_12,1_13,23_0,23_1,23_53,1_30,1_58,23_32,1_17,1_211,1_224,1_225,1_226,1_209,1_228,1_237,1_239,1_240,1_231,1_235,1_241,23_11,23_12,23_18,1_181,1_182,1_19,1_20,1_188,1_190,1_15,23_39,1_21,1_192,23_38,23_30,1_39,23_8-mD13r&amp;order=0" defer></script><div id="ctl10">
+	
+                                    <div id="ctl10_OGUserMessages"></div>
+                                
+</div>
+                        <div class="PlaceHolder">
+                            <div class="container-fluid">
+                                
+    <div class="MarginFullWidth">
+        <input type="hidden" id="ctl00$OGMainContent$HFIndexOffsets" name="ctl00$OGMainContent$HFIndexOffsets" value="" /><script id="dxss_145661486">
+<!--
+ASPx.SS(function(ASPx, dx) {
+ASPx.createControl(ASPxClientHiddenField,'OGMainContent_HFIndexOffsets','',{'callBack':function(arg) { WebForm_DoCallback('ctl00$OGMainContent$HFIndexOffsets',arg,ASPx.Callback,'OGMainContent_HFIndexOffsets',ASPx.CallbackError,true); },'uniqueID':'ctl00$OGMainContent$HFIndexOffsets'});
+
+});
+//-->
+</script>
+        <div class="PaddingTop10px-sm BCPTable" id="OGMainContent_BCPTable">
+	
+                    <div class="dxbs-fl form-horizontal" id="OGMainContent_BCPTable_ctl02">
+		<div class="row">
+			<div id="OGMainContent_BCPTable_ctl02_0" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="form-group">
+					<div class="dxbs-fl-ctrl dxbs-fl-ctrl-nc">
+						
+                                        <div id="OGMainContent_BCPTable_ctl02_GVTableWithAdaptivity" class="GVTableWithAdaptivity" style="background-color:#ECECEC;border:25px #ECECEC solid;">
+                                            <div class="row">
+                                                
+                                                <h1 id="OGMainContent_BCPTable_ctl02_CaptionRowA" class="CaptionRow col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                                    <span class="Bold">Příjezdy</span>
+                                                </h1>
+                                                <h1>
+                                                    <span id="OGMainContent_BCPTable_ctl02_LStationName" class="CaptionRow CaptionRowCenter Bold col-xs-9 col-sm-9 col-md-6 col-lg-6">Praha-Libeň</span>
+                                                </h1>
+                                                <span class="CaptionRow CaptionRowRight col-xs-3 col-sm-3 col-lg-3 col-md-3" id="DTime"></span>
+                                            </div>
+                                            <script id="dxss_113954460">
+<!--
+ASPx.SS(function(ASPx, dx) {
+ASPx.AccessibilitySR.DefaultCallbackMessage = 'Zpětného volání procesu.';
+
+});
+//-->
+</script><div class="dxbs-gridview PaddingTop10px" id="OGMainContent_BCPTable_ctl02_BGVTable">
+							<div class="panel panel-default">
+								<table id="OGMainContent_BCPTable_ctl02_BGVTable_DXMainTable" class="dxbs-table table table-bordered table-condensed GVTableContent">
+									<thead>
+										<tr id="OGMainContent_BCPTable_ctl02_BGVTable_DXHeadersRow0" class="GVTableHeader">
+											<th id="OGMainContent_BCPTable_ctl02_BGVTable_col7" class="dxbs-noclick" scope="col" style="width:215px;"><div class="dxbs-fixed-header-content">
+												<span>Ze směru</span>
+											</div></th><th id="OGMainContent_BCPTable_ctl02_BGVTable_col4" class="dxbs-noclick hidden-xs hidden-sm" scope="col" style="width:85px;"><div class="dxbs-fixed-header-content">
+												<span>Linka</span>
+											</div></th><th id="OGMainContent_BCPTable_ctl02_BGVTable_col0" class="dxbs-noclick hidden-xs hidden-sm" scope="col" style="width:120px;"><div class="dxbs-fixed-header-content">
+												<span>Pravidelný</span>
+											</div></th><th id="OGMainContent_BCPTable_ctl02_BGVTable_col1" class="dxbs-noclick hidden-xs hidden-sm" scope="col" style="width:120px;"><div class="dxbs-fixed-header-content">
+												<span>Aktuální</span>
+											</div></th><th id="OGMainContent_BCPTable_ctl02_BGVTable_col2" class="dxbs-noclick hidden-md hidden-lg hidden-xl" scope="col" style="width:120px;"><div class="dxbs-fixed-header-content">
+												<span>Čas/Aktuální</span>
+											</div></th><th id="OGMainContent_BCPTable_ctl02_BGVTable_col3" class="dxbs-noclick hidden-xs hidden-sm" scope="col" style="width:160px;"><div class="dxbs-fixed-header-content">
+												<span>Vlak</span>
+											</div></th><th id="OGMainContent_BCPTable_ctl02_BGVTable_col5" class="dxbs-noclick hidden-md hidden-lg hidden-xl" scope="col" style="width:120px;"><div class="dxbs-fixed-header-content">
+												<span>Vlak/Linka</span>
+											</div></th><th id="OGMainContent_BCPTable_ctl02_BGVTable_col10" class="dxbs-noclick dxbs-nrb" scope="col" style="width:120px;"><div class="dxbs-fixed-header-content">
+												<span>Nástupiště</span>
+											</div></th>
+										</tr>
+									</thead><tbody>
+										<tr id="OGMainContent_BCPTable_ctl02_BGVTable_DXDataRow0" class="even" style="background-color:#ECECEC;">
+											<td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell0_7" class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-xl-2">
+                                                            <div class="Bold" >Český Brod</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell0_4" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold" style="color:#002B59">S1</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell0_0" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold" style="color:#002B59">22:53</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell0_1" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold Red" ></div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell0_2" class="col-xs-2 col-sm-2 hidden-md hidden-lg hidden-xl">
+                                                            <div class="Bold" style="color:#002B59">22:53</div><div class="Bold Red" ></div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell0_3" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div style ="color:#002B59; float:left; padding-right:5px; font-weight:bold">Os 8614</div><div style="color:gray">ČD</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell0_5" class="col-xs-2 col-sm-2 hidden-md hidden-lg hidden-xl">
+                                                            <div style ="color:#002B59; float:left; padding-right:5px; font-weight:bold">Os 8614</div><div style="color:gray">ČD</div><div class="Bold" style="color:#002B59">S1</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell0_10" class="col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 dxbs-nrb">
+                                                            <div class="Bold" style="color:#002B59">2</div>
+                                                        </td>
+										</tr><tr id="OGMainContent_BCPTable_ctl02_BGVTable_DXDataRow1" class="odd">
+											<td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell1_7" class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-xl-2">
+                                                            <div class="Bold" >Praha Masaryk.n.</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell1_4" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold" style="color:#002B59">S1</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell1_0" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold" style="color:#002B59">22:59</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell1_1" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold Red" ></div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell1_2" class="col-xs-2 col-sm-2 hidden-md hidden-lg hidden-xl">
+                                                            <div class="Bold" style="color:#002B59">22:59</div><div class="Bold Red" ></div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell1_3" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div style ="color:#002B59; float:left; padding-right:5px; font-weight:bold">Os 9365</div><div style="color:gray">ČD</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell1_5" class="col-xs-2 col-sm-2 hidden-md hidden-lg hidden-xl">
+                                                            <div style ="color:#002B59; float:left; padding-right:5px; font-weight:bold">Os 9365</div><div style="color:gray">ČD</div><div class="Bold" style="color:#002B59">S1</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell1_10" class="col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 dxbs-nrb">
+                                                            <div class="Bold" style="color:#002B59">3</div>
+                                                        </td>
+										</tr><tr id="OGMainContent_BCPTable_ctl02_BGVTable_DXDataRow2" class="even" style="background-color:#ECECEC;">
+											<td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell2_7" class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-xl-2">
+                                                            <div class="Bold" >Graz Hbf</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell2_4" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold" style="color:#10A764">Ex3</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell2_0" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold" style="color:#10A764">23:08</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell2_1" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold Red" ></div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell2_2" class="col-xs-2 col-sm-2 hidden-md hidden-lg hidden-xl">
+                                                            <div class="Bold" style="color:#10A764">23:08</div><div class="Bold Red" ></div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell2_3" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div style ="color:#10A764; float:left; padding-right:5px; font-weight:bold">rj 372</div><div style="color:gray">ČD</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell2_5" class="col-xs-2 col-sm-2 hidden-md hidden-lg hidden-xl">
+                                                            <div style ="color:#10A764; float:left; padding-right:5px; font-weight:bold">rj 372</div><div style="color:gray">ČD</div><div class="Bold" style="color:#10A764">Ex3</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell2_10" class="col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 dxbs-nrb">
+                                                            <div class="Bold" style="color:#10A764">2</div>
+                                                        </td>
+										</tr><tr id="OGMainContent_BCPTable_ctl02_BGVTable_DXDataRow3" class="odd">
+											<td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell3_7" class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-xl-2">
+                                                            <div class="Bold" >Praha hl.n.</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell3_4" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold" style="color:#E60000">Ex2</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell3_0" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold" style="color:#E60000">23:09</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell3_1" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold Red" ></div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell3_2" class="col-xs-2 col-sm-2 hidden-md hidden-lg hidden-xl">
+                                                            <div class="Bold" style="color:#E60000">23:09</div><div class="Bold Red" ></div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell3_3" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div style ="color:#E60000; float:left; padding-right:5px; font-weight:bold">R 999</div><div style="color:gray">ČD</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell3_5" class="col-xs-2 col-sm-2 hidden-md hidden-lg hidden-xl">
+                                                            <div style ="color:#E60000; float:left; padding-right:5px; font-weight:bold">R 999</div><div style="color:gray">ČD</div><div class="Bold" style="color:#E60000">Ex2</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell3_10" class="col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 dxbs-nrb">
+                                                            <div class="Bold" style="color:#E60000">3</div>
+                                                        </td>
+										</tr><tr id="OGMainContent_BCPTable_ctl02_BGVTable_DXDataRow4" class="even" style="background-color:#ECECEC;">
+											<td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell4_7" class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-xl-2">
+                                                            <div class="Bold" >Praha Masaryk.n.</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell4_4" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold" style="color:#002B59">S1</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell4_0" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold" style="color:#002B59">23:29</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell4_1" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold Red" ></div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell4_2" class="col-xs-2 col-sm-2 hidden-md hidden-lg hidden-xl">
+                                                            <div class="Bold" style="color:#002B59">23:29</div><div class="Bold Red" ></div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell4_3" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div style ="color:#002B59; float:left; padding-right:5px; font-weight:bold">Os 8619</div><div style="color:gray">ČD</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell4_5" class="col-xs-2 col-sm-2 hidden-md hidden-lg hidden-xl">
+                                                            <div style ="color:#002B59; float:left; padding-right:5px; font-weight:bold">Os 8619</div><div style="color:gray">ČD</div><div class="Bold" style="color:#002B59">S1</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell4_10" class="col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 dxbs-nrb">
+                                                            <div class="Bold" style="color:#002B59">3</div>
+                                                        </td>
+										</tr><tr id="OGMainContent_BCPTable_ctl02_BGVTable_DXDataRow5" class="odd">
+											<td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell5_7" class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-xl-2">
+                                                            <div class="Bold" >Kolín</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell5_4" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold" style="color:#002B59">S1</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell5_0" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold" style="color:#002B59">23:38</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell5_1" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold Red" ></div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell5_2" class="col-xs-2 col-sm-2 hidden-md hidden-lg hidden-xl">
+                                                            <div class="Bold" style="color:#002B59">23:38</div><div class="Bold Red" ></div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell5_3" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div style ="color:#002B59; float:left; padding-right:5px; font-weight:bold">Os 9362</div><div style="color:gray">ČD</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell5_5" class="col-xs-2 col-sm-2 hidden-md hidden-lg hidden-xl">
+                                                            <div style ="color:#002B59; float:left; padding-right:5px; font-weight:bold">Os 9362</div><div style="color:gray">ČD</div><div class="Bold" style="color:#002B59">S1</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell5_10" class="col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 dxbs-nrb">
+                                                            <div class="Bold" style="color:#002B59">2</div>
+                                                        </td>
+										</tr><tr id="OGMainContent_BCPTable_ctl02_BGVTable_DXDataRow6" class="even" style="background-color:#ECECEC;">
+											<td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell6_7" class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-xl-2">
+                                                            <div class="Bold" >Praha hl.n.</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell6_4" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold" style="color:#10A764">Ex3</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell6_0" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold" style="color:#10A764">00:09</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell6_1" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold Red" ></div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell6_2" class="col-xs-2 col-sm-2 hidden-md hidden-lg hidden-xl">
+                                                            <div class="Bold" style="color:#10A764">00:09</div><div class="Bold Red" ></div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell6_3" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div style ="color:#10A764; float:left; padding-right:5px; font-weight:bold">IC 579</div><div style="color:gray">ČD</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell6_5" class="col-xs-2 col-sm-2 hidden-md hidden-lg hidden-xl">
+                                                            <div style ="color:#10A764; float:left; padding-right:5px; font-weight:bold">IC 579</div><div style="color:gray">ČD</div><div class="Bold" style="color:#10A764">Ex3</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell6_10" class="col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 dxbs-nrb">
+                                                            <div class="Bold" style="color:#10A764">3</div>
+                                                        </td>
+										</tr><tr id="OGMainContent_BCPTable_ctl02_BGVTable_DXDataRow7" class="odd">
+											<td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell7_7" class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-xl-2">
+                                                            <div class="Bold" >Praha hl.n.</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell7_4" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold" style="color:#002B59">S1</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell7_0" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold" style="color:#002B59">00:36</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell7_1" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold Red" ></div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell7_2" class="col-xs-2 col-sm-2 hidden-md hidden-lg hidden-xl">
+                                                            <div class="Bold" style="color:#002B59">00:36</div><div class="Bold Red" ></div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell7_3" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div style ="color:#002B59; float:left; padding-right:5px; font-weight:bold">Os 9301</div><div style="color:gray">ČD</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell7_5" class="col-xs-2 col-sm-2 hidden-md hidden-lg hidden-xl">
+                                                            <div style ="color:#002B59; float:left; padding-right:5px; font-weight:bold">Os 9301</div><div style="color:gray">ČD</div><div class="Bold" style="color:#002B59">S1</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell7_10" class="col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 dxbs-nrb">
+                                                            <div class="Bold" style="color:#002B59">3</div>
+                                                        </td>
+										</tr><tr id="OGMainContent_BCPTable_ctl02_BGVTable_DXDataRow8" class="even" style="background-color:#ECECEC;">
+											<td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell8_7" class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-xl-2">
+                                                            <div class="Bold" >Budapest-N.pu</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell8_4" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold" style="color:#10A764">Ex3</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell8_0" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold" style="color:#10A764">00:52</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell8_1" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold Red" ></div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell8_2" class="col-xs-2 col-sm-2 hidden-md hidden-lg hidden-xl">
+                                                            <div class="Bold" style="color:#10A764">00:52</div><div class="Bold Red" ></div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell8_3" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div style ="color:#10A764; float:left; padding-right:5px; font-weight:bold">EC 270</div><div style="color:gray">ČD</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell8_5" class="col-xs-2 col-sm-2 hidden-md hidden-lg hidden-xl">
+                                                            <div style ="color:#10A764; float:left; padding-right:5px; font-weight:bold">EC 270</div><div style="color:gray">ČD</div><div class="Bold" style="color:#10A764">Ex3</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell8_10" class="col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 dxbs-nrb">
+                                                            <div class="Bold" style="color:#10A764">2</div>
+                                                        </td>
+										</tr><tr id="OGMainContent_BCPTable_ctl02_BGVTable_DXDataRow9" class="odd">
+											<td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell9_7" class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-xl-2">
+                                                            <div class="Bold" >Praha Masaryk.n.</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell9_4" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold" style="color:#002B59">S1</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell9_0" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold" style="color:#002B59">03:39</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell9_1" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div class="Bold Red" ></div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell9_2" class="col-xs-2 col-sm-2 hidden-md hidden-lg hidden-xl">
+                                                            <div class="Bold" style="color:#002B59">03:39</div><div class="Bold Red" ></div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell9_3" class="hidden-xs hidden-sm col-md-1 col-lg-1 col-xl-1">
+                                                            <div style ="color:#002B59; float:left; padding-right:5px; font-weight:bold">Os 9305</div><div style="color:gray">ČD</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell9_5" class="col-xs-2 col-sm-2 hidden-md hidden-lg hidden-xl">
+                                                            <div style ="color:#002B59; float:left; padding-right:5px; font-weight:bold">Os 9305</div><div style="color:gray">ČD</div><div class="Bold" style="color:#002B59">S1</div>
+                                                        </td><td id="OGMainContent_BCPTable_ctl02_BGVTable_tccell9_10" class="col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 dxbs-nrb">
+                                                            <div class="Bold" style="color:#002B59">3</div>
+                                                        </td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+                                        </div>
+                                    
+					</div>
+				</div>
+			</div><div id="OGMainContent_BCPTable_ctl02_1" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="form-group">
+					<div class="dxbs-fl-ctrl dxbs-fl-ctrl-nc">
+						
+                                        
+                                    
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+                    <nav role="navigation">
+                        <div class="dxbs-fl form-horizontal PaddingTop10px BCPAction" id="OGMainContent_BCPTable_BCPActions">
+		<div class="row">
+			<div id="OGMainContent_BCPTable_BCPActions_0" class="col-md-3 col-lg-3">
+				<div class="form-group">
+					<div class="dxbs-fl-ctrl hidden-xs hidden-sm dxbs-fl-ctrl-nc">
+						&nbsp;
+					</div>
+				</div>
+			</div><div id="OGMainContent_BCPTable_BCPActions_1" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 text-center">
+				<div class="form-group">
+					<div class="dxbs-fl-ctrl dxbs-fl-ctrl-nc">
+						
+                                            <a class="dxbs-hyperlink BHLButton" id="BHLBack" href="StationList.aspx"><span class="badge BHLButtonBadge"><span>V&#253;běr stanic</span></span></a>
+                                        
+					</div>
+				</div>
+			</div><div id="OGMainContent_BCPTable_BCPActions_2" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 text-center">
+				<div class="form-group">
+					<div class="dxbs-fl-ctrl dxbs-fl-ctrl-nc">
+						
+                                            <a class="dxbs-hyperlink BHLButton" id="OGMainContent_BCPTable_BCPActions_BHLDeparture" href="StationTable.aspx?Key=3471"><span class="badge BHLButtonBadge"><span>Odjezdy</span></span></a>
+                                        
+					</div>
+				</div>
+			</div><div id="OGMainContent_BCPTable_BCPActions_3" class="col-xs-12 col-sm-12 col-md-2 col-lg-2 text-center">
+				<div class="form-group">
+					<div class="dxbs-fl-ctrl dxbs-fl-ctrl-nc">
+						
+                                            <a class="dxbs-hyperlink BHLButton text-muted" id="BHLArrival"><span class="badge BHLButtonBadge"><span>Př&#237;jezdy</span></span></a>
+                                        
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+                    </nav>
+                
+</div>
+    </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Footer" id="OGFooter">
+                    <div class="container-fluid">
+                        
+
+<div class="row">
+    <div id="OGFooterOPDSZDC_OGDivFooterLogo" class="OGFooterBorderRightMinMD  col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <div class="OGFooterContent">
+            
+            <img id="OGFooterOPDSZDC_OGOPDImg" class="FooterOPDLogo" src="../Images/OG/LogoOPDAndEU.jpg" alt="Obrázek v zápatí stránky" />
+        </div>
+    </div>
+    <div id="OGFooterOPDSZDC_OGDivOwnerOperator" class="OGFooterBorderRight col-xs-5 col-sm-6 col-md-3 col-lg-3">
+        <div class="OGFooterContent">
+            <div>
+                <span>Vlastník:</span>
+                <a id="OGFTROwner" class="FTRPopupTarget" href="https://www.spravazeleznic.cz" target="_blank">Správa železnic, státní organizace</a>
+                <div class="dxbs-popup FTRPopupControl dx-hc modal-dialog" id="OGFooterOPDSZDC_ctl01" style="width:350px;">
+	<div class="modal-content">
+		<div class="modal-body FTRPopupContent">
+			
+                            Obchodní firma: Správa železnic, státní organizace<br/>Sídlo: Praha 1, Nové Město, Dlážděná 1003/7, PSČ 110 00<br/>IČ: 709 94 234<br/>DIČ: CZ 709 94 234<br/>WWW: www.spravazeleznic.cz<br/>Zápis v obchodním rejstříku: Městský soud v Praze, oddíl A, vložka 48384
+                        
+		</div>
+	</div>
+</div>
+            </div>
+            <div>
+                <span>Provozovatel:</span>
+                <a id="OGFTROperator" class="FTRPopupTarget" href="https://www.oltis.cz" target="_blank">OLTIS Group a.s.</a>
+                <div class="dxbs-popup FTRPopupControl dx-hc modal-dialog" id="OGFooterOPDSZDC_ctl03" style="width:350px;">
+	<div class="modal-content">
+		<div class="modal-body FTRPopupContent">
+			
+                            Obchodní firma: OLTIS Group a.s.<br/>Sídlo: Olomouc, Dr. Milady Horákové 1200/27A, PSČ 772 00<br/>IČ: 268 47 281<br/>DIČ: CZ 268 47 281<br/>WWW: www.oltis.cz<br/>Zápis v obchodním rejstříku: Rejstříkový soud v Ostravě, oddíl B, vložka 2844
+                        
+		</div>
+	</div>
+</div>
+            </div>
+        </div>
+    </div>
+    <div id="OGFooterOPDSZDC_OGDivCR" class="col-xs-7 col-sm-6 col-md-3 col-lg-3">
+        <div class="OGFooterContent">
+            <span>© 2022 Správa železnic, jakékoliv užití dat bez souhlasu vlastníka je porušením zákona č. 121/2000 Sb., autorský zákon, v platném znění.</span>
+            <span id="OGFooterOPDSZDC_OGCookieLink" class="CPPCookieLink" onclick="OGCICookieLawPP.Show();" title="Zobrazit nastavení Cookies."> <img id="OGFooterOPDSZDC_OGCookieIcon" class="CookieFooterIcon" src="../Images/OG/cookieicon.svg" />Cookies.</span>
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+<script type="text/javascript">
+    function BtnSelect() {
+        $('#OGBtnCookieAcceptSel').show();
+        $('#OGCookieChB').show();
+        $('#OGBtnCookieAcceptAll').hide();
+        $('#OGBtnCookieSelect').hide();
+        return false;
+    }
+
+    function BtnAcceptAll() {
+        BtnAccept();
+        return false;
+    }
+
+    function BtnAcceptSel() {
+        BtnAccept();
+        return false;
+    }
+
+    function BtnClose() {
+        OGCICookieLawPP.Hide();
+        return false;
+    }
+
+    function BtnAccept() {
+        SetCookie('Vitamin_TechCookie', '1', 365);
+        OGCICookieLawPP.Hide();
+    }
+</script>
+<div id="OGCookieLaw"></div>
+<div class="modal dxbs-modal">
+	<div class="dxbs-popup CPPControl dx-hc modal-dialog" id="CookieLawSZDC1_OGCookieLawPP">
+		<div class="modal-content">
+			<div class="modal-header">
+				
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    Nastavení Cookies<a id="OGBtnCookieClose" href="#" class="BtnClose" onclick="return BtnClose();">×</a>
+                </div>
+            </div>
+        </div>
+    
+			</div><div class="modal-body">
+				
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        Na těchto webových stránkách používáme technické cookies pro jejich správné fungování. Kliknutím na <b>Povolit vše</b> vyjadřujete souhlas s použitím všech cookies. Tento souhlas můžete vzít kdykoliv zpět a nastavení upravit v patičce webové stránky pod odkazem <b>Cookies</b>. Podrobnější informace najdete v 
+                        <a href="https://www.spravazeleznic.cz/cookies#noCookies" class="link" target="_blank">Prohlášení o používání cookies</a>.
+                    </div>
+                </div>
+                <div class="row" id="OGCookieChB" style="display: none">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <br />
+                        <div>
+                            <input type="checkbox" id="OGCookieTechnical" name="OGCookieTechnical" class="checkbox-custom" checked disabled />
+                            <label class="checkbox-custom-label" style="opacity: 0.6" for="OGCookieTechnical">
+                                Technické (nezbytné) cookies – jsou nezbytné pro správné fungování internetových stránek. Umožňují základní funkce internetových stránek.
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+			</div><div class="modal-footer">
+				
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <button id="OGBtnCookieSelect" class="btn btnLeft" onclick="return BtnSelect();">Povolit vybrané</button>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right">
+                    <button id="OGBtnCookieAcceptAll" class="btn btnRight" onclick="return BtnAcceptAll();">Povolit vše</button>
+                    <button id="OGBtnCookieAcceptSel" class="btn btnRight" style="display: none;" onclick="return BtnAcceptSel();">Povolit vybrané</button>
+                </div>
+            </div>
+        </div>
+    
+			</div>
+		</div>
+	</div>
+</div><script id="dxss_1502240865">
+<!--
+ASPx.SS(function(ASPx, dx) {
+ASPx.createControl(dx.BootstrapClientCallbackPanel,'ctl10','OGMessageCP',{'callBack':function(arg) { WebForm_DoCallback('ctl00$ctl10',arg,ASPx.Callback,'ctl10',ASPx.CallbackError,true); },'uniqueID':'ctl00$ctl10','hideContentOnCallback':false,'loadingPanel':{'text':'Načítání&hellip;'}});
+
+ASPx.createControl(dx.BootstrapClientGridView,'OGMainContent_BCPTable_ctl02_BGVTable','',{'callBack':function(arg) { WebForm_DoCallback('ctl00$OGMainContent$BCPTable$ctl02$BGVTable',arg,ASPx.Callback,'OGMainContent_BCPTable_ctl02_BGVTable',ASPx.CallbackError,true); },'disableSwipeGestures':true,'uniqueID':'ctl00$OGMainContent$BCPTable$ctl02$BGVTable','stateObject':{'keys':[],'callbackState':'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','groupLevelState':{},'selection':''},'callBacksEnabled':true,'pageRowCount':10,'pageRowSize':10,'pageIndex':-1,'pageCount':1,'selectedWithoutPageRowCount':0,'visibleStartIndex':0,'focusedRowIndex':-1,'allowFocusedRow':false,'allowSelectByItemClick':false,'allowSelectSingleRowOnly':false,'callbackOnFocusedRowChanged':false,'callbackOnSelectionChanged':false,'editState':0,'editItemVisibleIndex':-1,'searchPanelFilter':'','allowDelete':false,'allowEdit':false,'allowInsert':false,'columnProp':[[0,,,'Time',0,3,,,2,,,,,,0],[1,,,'Predict',0,3,,,3,,,,,,0],[2,,,'TimePredict',0,,,,4,,,,,,0],[3,,,'Train',0,,,,5,,,,,,0],[4,,,'Line',0,,,,1,,,,,,0],[5,,,'TrainLine',0,,,,6,,,,,,0],[6,0,,'Destination',0,,,,,,,,,,0,,1],[7,,,'From',0,,,,0,,,,,,0],[8,0,,'Direction',0,,,,,,,,,,0,,1],[9,0,,'DestinationDirection',0,,,,,,,,,,0,,1],[10,,,'PlatformTrack',0,,,,7,,,,,,0]],'shouldScrollToNewRow':false,'editMode':2,'indentColumnCount':0,'allowChangeColumnHierarchy':false,'allowMultiColumnAutoFilter':false,'loadingPanel':{'text':'Načítání&hellip;'},'cssClasses':{'iei':'dxbs-icon dxbs-icon-error','idadad':'dxbs-icon dxbs-icon-arrow-down','idadau':'dxbs-icon dxbs-icon-arrow-up','idadal':'dxbs-icon dxbs-icon-arrow-down rotated','idadar':'dxbs-icon dxbs-icon-arrow-up rotated'}});
+dx.BootstrapClientGridView.postponeInit('OGMainContent_BCPTable_ctl02_BGVTable', ({'errorItemHtml':'<tr class="danger">\r\n\t<td data-colSpan="8"></td>\r\n</tr>'}));
+
+ASPx.createControl(dx.BootstrapClientFormLayout,'OGMainContent_BCPTable_ctl02','',{'uniqueID':'ctl00$OGMainContent$BCPTable$ctl02','alignItemCaptionsInAllGroups':true});
+
+ASPx.createControl(dx.BootstrapClientFormLayout,'OGMainContent_BCPTable_BCPActions','',{'uniqueID':'ctl00$OGMainContent$BCPTable$BCPActions','alignItemCaptionsInAllGroups':true});
+
+ASPx.createControl(dx.BootstrapClientCallbackPanel,'OGMainContent_BCPTable','BCPCITable',{'callBack':function(arg) { WebForm_DoCallback('ctl00$OGMainContent$BCPTable',arg,ASPx.Callback,'OGMainContent_BCPTable',ASPx.CallbackError,true); },'uniqueID':'ctl00$OGMainContent$BCPTable','hideContentOnCallback':false,'loadingPanel':{'text':'Načítání&hellip;'}},{'EndCallback':BCPCITableOnEndCallback});
+
+ASPx.createControl(dx.BootstrapClientPopupControl,'OGFooterOPDSZDC_ctl01','',{'uniqueID':'ctl00$OGFooterOPDSZDC$ctl01','popupAnimationType':'slide','popupAction':'MouseOver','closeAction':'MouseOut','popupVerticalAlign':'Above','isPopupPositionCorrectionOn':false,'width':350,'widthFromServer':true,'defaultWindowPopupElementIDList':'#OGFTROwner'});
+
+ASPx.createControl(dx.BootstrapClientPopupControl,'OGFooterOPDSZDC_ctl03','',{'uniqueID':'ctl00$OGFooterOPDSZDC$ctl03','popupAnimationType':'slide','popupAction':'MouseOver','closeAction':'MouseOut','popupVerticalAlign':'Above','isPopupPositionCorrectionOn':false,'width':350,'widthFromServer':true,'defaultWindowPopupElementIDList':'#OGFTROperator'});
+
+ASPx.createControl(dx.BootstrapClientPopupControl,'CookieLawSZDC1_OGCookieLawPP','OGCICookieLawPP',{'callBack':function(arg) { WebForm_DoCallback('ctl00$CookieLawSZDC1$OGCookieLawPP',arg,ASPx.Callback,'CookieLawSZDC1_OGCookieLawPP',ASPx.CallbackError,true); },'uniqueID':'ctl00$CookieLawSZDC1$OGCookieLawPP','popupAnimationType':'auto','closeAction':'None','popupHorizontalAlign':'WindowCenter','popupVerticalAlign':'WindowCenter','isPopupPositionCorrectionOn':false,'modal':true,'defaultWindowPopupElementIDList':'#OGCookieLaw','adaptivityEnabled':true,'switchAtWindowInnerWidth':90000,'loadingPanel':{'text':'Načítání&hellip;'},'overlay':{}});
+
+
+});
+//-->
+</script>
+
+    
+
+<script type="text/javascript">
+//<![CDATA[
+
+var callBackFrameUrl='/Tabule/WebResource.axd?d=beToSAE3vdsL1QUQUxjWdSGMYq9C77K1IVXrRwmtKwhmbVthuvV3HrYM0CHR0fAZKKIftDYsvV8mVcveUcRGoA2&t=638369102615952268';
+WebForm_InitCallback();//]]>
+</script>
+</form>
+</body>
+</html>
